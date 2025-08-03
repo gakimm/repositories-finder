@@ -2,16 +2,23 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styles from '../../../../styles/Readme.module.css'
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
 interface ReadmePageProps {
   params: {
     username: string;
     reponame: string;
   };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
+export const metadata: Metadata = {
+  title: 'Repository README',
+  description: 'View the README file of a GitHub repository',
+};
+
 export default async function ReadmePage({ params }: ReadmePageProps) {
-  const { username, reponame } = params;
+  const { username, reponame } = await params;
 
   const res = await fetch(`https://api.github.com/repos/${username}/${reponame}/readme`, {
     headers: {
