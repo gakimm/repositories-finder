@@ -3,18 +3,17 @@ import Link from 'next/link';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 interface UserPageProps {
-  params: {
-    username: string;
-  };
+    params: Promise<{
+        username: string;
+    }>;
 }
 
 interface GitHubRepo {
     id: number;
     name: string;
     html_url: string;
-    description: string;
-  }
-  
+    description: string | null;
+}
 
 export default async function UserPage({ params }: UserPageProps) {
   const { username } = await params;
@@ -35,9 +34,8 @@ export default async function UserPage({ params }: UserPageProps) {
       </>
     );
   }
-  
 
-  const repos = await res.json();
+  const repos: GitHubRepo[] = await res.json();
 
   return (
     <div className={styles.userPage}>
@@ -68,7 +66,7 @@ export default async function UserPage({ params }: UserPageProps) {
                 <span className={styles.tooltip}>Go to GitHub Profile</span>
               </a>
             </div>
-            <p>{repo.description}</p>
+            <p>{repo.description || 'No description available'}</p>
           </li>
         ))}
       </ul>
