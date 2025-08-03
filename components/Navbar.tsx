@@ -5,6 +5,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import styles from '../styles/Navbar.module.css';
 import { useSearch } from '../lib/SearchContext'; 
+import Link from 'next/link';
 
 export default function Navbar() {
     const { username, setUsername } = useSearch(); 
@@ -29,7 +30,7 @@ export default function Navbar() {
                     <Bars3Icon className={styles.hamburgerIcon} onClick={() => setSidebarOpen(true)} />
                 </div>
                 <div className={styles.brand}>
-                    <a href="/">Repositories Finder</a>
+                    <Link href="/">Repositories Finder</Link>
                 </div>
 
                 <div className={styles.desktopOnly}>
@@ -45,8 +46,8 @@ export default function Navbar() {
                     </form>
 
                     <div className={styles.links}>
-                        <a href={"/"} className={pathname === '/' ? styles.active : ''}>Home</a>
-                        <a href="/about" className={pathname === '/about' ? styles.active : ''}>About</a>
+                        <Link href="/" className={pathname === '/' ? styles.active : ''}>Home</Link>
+                        <Link href="/about" className={pathname === '/about' ? styles.active : ''}>About</Link>
                     </div>
                 </div>
             </nav>
@@ -73,6 +74,7 @@ export default function Navbar() {
                     <a href={"/"} className={pathname === '/' ? styles.active : ''} onClick={() => setSidebarOpen(false)}>Home</a>
                     <a href="/about" className={pathname === '/about' ? styles.active : ''} onClick={() => setSidebarOpen(false)}>About</a>
                 </div>
+
             </div>
         </>
     );

@@ -3,7 +3,12 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
-const SearchContext = createContext<any>(null);
+interface SearchContextType {
+    username: string;
+    setUsername: (value: string) => void;
+}
+
+const SearchContext = createContext<SearchContextType | undefined>(undefined);
 
 export function SearchProvider({ children }: { children: React.ReactNode }) {
   const [username, setUsername] = useState('');
@@ -24,4 +29,10 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-export const useSearch = () => useContext(SearchContext);
+export const useSearch = () => {
+    const context = useContext(SearchContext);
+    if (context === undefined) {
+      throw new Error('useSearch must be used within a SearchProvider');
+    }
+    return context;
+  };

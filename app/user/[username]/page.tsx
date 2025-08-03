@@ -8,6 +8,14 @@ interface UserPageProps {
   };
 }
 
+interface GitHubRepo {
+    id: number;
+    name: string;
+    html_url: string;
+    description: string;
+  }
+  
+
 export default async function UserPage({ params }: UserPageProps) {
   const { username } = await params;
 
@@ -42,7 +50,7 @@ export default async function UserPage({ params }: UserPageProps) {
         <span className={styles.repoCount}> ({repos.length})</span>
       </h1>
       <ul className={styles.repolist}>
-        {repos.map((repo: any)  =>  (
+        {repos.map((repo: GitHubRepo)  =>  (
           <li key={repo.id} className={styles.repoitem}>
             <div className={styles.repoHeader}>
               <Link href={`/user/${username}/${repo.name}`} title='View README'>
