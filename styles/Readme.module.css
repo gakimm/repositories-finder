@@ -1,0 +1,82 @@
+.container {
+    max-width: 768px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .readme {
+    line-height: 1.8;
+  }
+  
+  .readme h1,
+  .readme h2,
+  .readme h3 {
+    margin-top: 2rem;
+    font-weight: 600;
+  }
+  
+  .readme code {
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: monospace;
+  }
+  
+  .readme pre {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+  }
+  
+  .readme a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  
+  .readme a:hover {
+    text-decoration: underline;
+  }
+  
+  .error {
+    text-align: center;
+    padding: 1rem;
+    color: #b00020;
+    font-weight: bold;
+  }
+
+  .breadcrumbs {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #666;
+  }
+  
+  .breadcrumbs a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+  
+  .breadcrumbs a:hover {
+    text-decoration: underline;
+  }
+  
+  

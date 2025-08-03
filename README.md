@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+*** REPOSITORIES FINDER ***
+
+* Input username
+* Show user projects / repositories
+* Readme Reader 
+* Breadcrumbs navigasi
+* Error handling if user/readme not found
+* used CSS Custom
+
+---
+
+### `README.md`
+
+````md
+# 🔍 GitHub Repositories Finder
+
+A simple Next.js app to browse public repositories from any GitHub username.  
+Built with modern React features and clean UI using Custom CSS
+
+---
+## Features
+
+- Search GitHub users by username
+- List public repositories for the user
+- Display README content of selected repository
+- Pure CSS styling (no frameworks like Tailwind/Bootstrap)
+- Clean component structure and state management
+- Responsive design for mobile & desktop
+
+---
+
+## Tech Stack
+
+| Tool          | Description                              |
+|---------------|------------------------------------------|
+| **Next.js**   | Framework for server-rendered React apps |
+| **HeroIcon** | beautiful icon                           |
+| **TypeScript**| Strongly-typed JavaScript                |
+| **CSS Modules** | Custom CSS without any framework       |
+| **GitHub REST API** | Fetch user and repo data from GitHub |
+| **React Context API** | Lightweight state management     |
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/gakimm/repositories-finder.git
+cd repositories-finder
+````
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn
+```
+
+### 3. Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see it in action.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📷 UI Preview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> Home
+> ![home](public/screenshots/home.png)
 
-## Learn More
+> About
+> ![about](public/screenshots/about.png)
 
-To learn more about Next.js, take a look at the following resources:
+> User Repo List
+> ![repo-list](public/screenshots/repositories.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> User Repo Readme.md reader
+> ![readme-reader](public/screenshots/readme-reader.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> User not found
+> ![user-not-found](public/screenshots/user-not-found.png)
 
-## Deploy on Vercel
+> User Repo Readme.md reader
+> ![readme-reader](public/screenshots/readme-not-found.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+
+MIT — free to use and modify.
+
+---
+
+## Acknowledgements
+
+* GitHub REST API
+* Next.js team
+* Heroicons for icons
+
+---
+
+Feel free to fork and enhance the project! Pull requests are welcome
+
+```
+---

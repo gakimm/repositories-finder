@@ -1,0 +1,31 @@
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 75vh;
+        color: #333;
+        font-family: 'Open Sans', sans-serif;
+        padding: 6rem;
+        gap: 1rem;
+    }
+  
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    .description {
+        width: 100%;
+        max-width: 700px;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .textBlue {
+        color: #0056b3;
+    }
+
+    .textYellow {
+        color: #e0bf28;
+    }
